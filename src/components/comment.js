@@ -7,14 +7,16 @@ export default class Comments extends Component {
     this.commentBox = React.createRef(); // Creates a reference to inject the <script> element
   }
   componentDidMount () {
-      const utteranceTheme = "github-dark";
       let scriptEl = document.createElement("script");
-      scriptEl.setAttribute("src", "https://utteranc.es/client.js");
-      scriptEl.setAttribute("crossorigin","anonymous");
+      scriptEl.setAttribute("src", "https://giscus.app/client.js");
+      scriptEl.setAttribute("crossorigin", "anonymous");
       scriptEl.setAttribute("async", true);
-      scriptEl.setAttribute("repo", "heriswn/gatsby-improved-starter-blog-comments");
-      scriptEl.setAttribute("issue-term", "pathname");
-      scriptEl.setAttribute( "theme", utteranceTheme);
+      scriptEl.setAttribute("data-repo", "heriswn/gatsby-improved-starter-blog");
+      scriptEl.setAttribute("data-mapping", "pathname");
+      scriptEl.setAttribute("data-reactions-enabled", "1");
+      scriptEl.setAttribute("data-emit-metadata", "1");
+      scriptEl.setAttribute("data-lang", "en");
+      scriptEl.setAttribute( "data-theme", "dark");
       this.commentBox.current.appendChild(scriptEl);
   }
 

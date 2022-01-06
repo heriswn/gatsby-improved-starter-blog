@@ -25,7 +25,7 @@ Navigate to `localhost:8000`.
 - SEO.
 - Time to read display.
 - Support Dark Mode with useState.
-- Support Comments with [utterances 🔮](https://utteranc.es).
+- Support Comments with [giscus 💎](https://giscus.app/).
 - Support Umami Analytics (view in [here](https://web-umami.herokuapp.com/share/RzkgB2wL/gatsby-improved-starter-blog)).
 
 ## Build Details (Latest Release v1.5.0)
