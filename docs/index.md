@@ -4,34 +4,62 @@ You can use the [editor on GitHub](https://github.com/heriswn/gatsby-improved-st
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+## Quickstart
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Personal website running on GatsbyJs, ReactJs, and Nodejs improved from [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
-```markdown
-Syntax highlighted code block
+To install
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```
+yarn install
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+then run local server:
 
-### Jekyll Themes
+```bash
+yarn
+yarn run dev
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/heriswn/gatsby-improved-starter-blog/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Navigate to `localhost:8000`.
 
-### Support or Contact
+## Features
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+- Gatsby 4.
+- Posts and pages in Markdown.
+- RSS Feeds.
+- SEO.
+- Time to read display.
+- Support Dark Mode with useState.
+- Support Comments with [giscus 💎](https://giscus.app/).
+- Support Umami Analytics (view in [here](https://web-umami.herokuapp.com/share/RzkgB2wL/gatsby-improved-starter-blog)).
+
+## Build Details (Latest Release v1.5.0)
+
+:clock1: Build time: **2m**
+
+## Performance
+
+### Lighthouse report
+
+| Metric | Score |
+| ----- | ---- |
+| Performance |   :green_heart: 98   |
+| Accessibility |   :green_heart: 100   |
+| Best Practices |   :green_heart: 100   |
+| SEO |   :green_heart: 92   |
+
+:link: [View full report](https://build-c4a19119-12d5-4426-a49c-885ed6c48074.gtsb.io/reports/lighthouse/index.html)
+
+
+## Contributing
+
+If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please do not hesitate to open a pull request and fix it!
+
+## Acknowledgements
+
+- Gatsby - [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
