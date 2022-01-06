@@ -14,8 +14,6 @@ export default class Comments extends Component {
       scriptEl.setAttribute("data-repo", "heriswn/gatsby-improved-starter-blog");
       scriptEl.setAttribute("data-category", "general");
       scriptEl.setAttribute("data-mapping", "pathname");
-      scriptEl.setAttribute("data-reactions-enabled", "1");
-      scriptEl.setAttribute("data-emit-metadata", "0");
       scriptEl.setAttribute("data-lang", "en");
       scriptEl.setAttribute( "data-theme", "dark");
       this.commentBox.current.appendChild(scriptEl);
