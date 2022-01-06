@@ -17,24 +17,17 @@ export default class Footer extends Component {
         <ul>
           <li>
             <Link
-            href="https://github.com/heriswn"
+            href="https://github.com/heriswn/gatsby-improved-starter-blog"
             target="_blank"
             rel="noopener noreferrer"
-            >Github</Link>
+            >github</Link>
           </li>
           <li>
             <Link
             href="https://gatsbyimprovedstarterblog.gatsbyjs.io/rss.xml"
             target="_blank"
             rel="noopener noreferrer"
-            >RSS</Link>
-          </li>
-          <li>
-            <Link
-            href="https://github.com/heriswn/gatsby-improved-starter-blog"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Source</Link>
+            >rss</Link>
           </li>
         </ul>
       </footer>

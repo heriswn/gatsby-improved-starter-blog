@@ -1,8 +1,4 @@
 {
-  "origins": [
-    "https://gatsbyimprovedstarterblog.gatsbyjs.io/"
-  ],
-  "originsRegex": [
-    "http://localhost:[0-9]+"
-  ]
+  "origins": ["https://gatsbyimprovedstarterblog.gatsbyjs.io"],
+  "originsRegex": ["http://localhost:[0-9]+"]
 }
