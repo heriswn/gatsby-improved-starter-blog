@@ -86,6 +86,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       author: Author
       siteUrl: String
       social: Social
+      console: Console
     }
 
     type Author {
@@ -95,6 +96,11 @@ exports.createSchemaCustomization = ({ actions }) => {
 
     type Social {
       twitter: String
+    }
+
+    type Console {
+      name: String
+      search: String
     }
 
     type MarkdownRemark implements Node {

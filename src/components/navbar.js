@@ -31,7 +31,7 @@ export default class Navbar extends Component {
         <div className="nav-container">
           <div>
             <Link className="header-link-home" to="/">
-              Gatsby Improved Starter Blog
+              Home
             </Link>
           </div>
           <div className="links">

@@ -21,6 +21,10 @@ const Seo = ({ description, lang, meta, title }) => {
             social {
               twitter
             }
+            console {
+              name
+              search
+            }
           }
         }
       }
@@ -29,6 +33,8 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const metaSearch = site.siteMetadata.console.name
+  const metaConsole = site.siteMetadata.console.search
 
   return (
     <Helmet
@@ -39,8 +45,8 @@ const Seo = ({ description, lang, meta, title }) => {
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
         {
-          name=`google-site-verification`,
-          content= rP2__VP8Lw77FeKDlPFTHxn_RE9B164EgQZ1CCHADqA,
+          name: metaSearch,
+          content: metaConsole,
         },
         {
           name: `description`,
