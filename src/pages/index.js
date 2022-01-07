@@ -7,12 +7,13 @@ import Seo from "../components/seo"
 import Footer from "../components/footer"
 import { formatPostDate, formatReadingTime } from "../utils/helpers"
 
-const BlogIndex = ({ data }) => {
+const BlogIndex = ({ location, data }) => {
   const posts = data.allMarkdownRemark.nodes
+  const siteTitle = data.site.siteMetadata?.title || `Title`
 
   if (posts.length === 0) {
     return (
-      <Layout>
+      <Layout location={location} title={siteTitle}>
         <Seo title="Home" />
         <Bio />
         <p>
@@ -26,7 +27,7 @@ const BlogIndex = ({ data }) => {
   }
 
   return (
-    <Layout>
+    <Layout location={location} title={siteTitle}>
       <Seo title="Home" />
       <Bio />
       <ol style={{ listStyle: `none` }}>

@@ -29,8 +29,10 @@ export default class Navbar extends Component {
     return (
       <nav className={scrolled ? 'nav-scroll' : 'nav'}>
         <div className="nav-container">
-          <div className="brand">
-            <Link to="/">Gatsby Improved Starter Blog</Link>
+          <div>
+            <Link className="header-link-home" to="/">
+              Gatsby Improved Starter Blog
+            </Link>
           </div>
           <div className="links">
             <Link to="/">Blog</Link>

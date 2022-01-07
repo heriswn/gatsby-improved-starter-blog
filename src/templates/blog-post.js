@@ -8,12 +8,13 @@ import Comments from "../components/comment"
 import Footer from "../components/footer"
 import { formatPostDate, formatReadingTime } from "../utils/helpers"
 
-const BlogPostTemplate = ({ data}) => {
+const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
+  const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
 
   return (
-    <Layout>
+    <Layout location={location} title={siteTitle}>
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
