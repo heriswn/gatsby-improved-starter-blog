@@ -12,7 +12,8 @@ export default class Comments extends Component {
       scriptEl.setAttribute("crossorigin", "anonymous");
       scriptEl.setAttribute("async", true);
       scriptEl.setAttribute("data-repo", "heriswn/gatsby-improved-starter-blog");
-      scriptEl.setAttribute("data-category", "general");
+      scriptEl.setAttribute("data-repo-id", "R_kgDOGXv20Q");
+      scriptEl.setAttribute("data-category-id", "DIC_kwDOGXv20c4B_6eX");
       scriptEl.setAttribute("data-mapping", "pathname");
       scriptEl.setAttribute("data-lang", "en");
       scriptEl.setAttribute( "data-theme", "dark");
