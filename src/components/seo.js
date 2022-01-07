@@ -21,6 +21,10 @@ const Seo = ({ description, lang, meta, title }) => {
             social {
               twitter
             }
+            console {
+              name
+              search
+            }
           }
         }
       }
@@ -29,6 +33,8 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const metaSearch = site.siteMetadata.console.name
+  const metaConsole = site.siteMetadata.console.search
 
   return (
     <Helmet
@@ -38,6 +44,10 @@ const Seo = ({ description, lang, meta, title }) => {
       title={title}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
       meta={[
+        {
+          name: metaSearch,
+          content: metaConsole,
+        },
         {
           name: `description`,
           content: metaDescription,
