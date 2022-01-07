@@ -15,7 +15,7 @@ export default class Comments extends Component {
       scriptEl.setAttribute("data-repo-id", "R_kgDOGXv20Q");
       scriptEl.setAttribute("data-category-id", "DIC_kwDOGXv20c4B_6eX");
       scriptEl.setAttribute("data-mapping", "pathname");
-      scriptEl.setAttribute("data-lang", "en");
+      scriptEl.setAttribute("data-lang", "id");
       scriptEl.setAttribute( "data-theme", "dark");
       this.commentBox.current.appendChild(scriptEl);
   }
