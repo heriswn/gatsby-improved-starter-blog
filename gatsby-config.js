@@ -10,6 +10,7 @@ module.exports = {
     social: {
       twitter: `analystid`,
     },
+    // add search console for submit to google
     console: {
       name: `google-site-verification`,
       search: `rP2__VP8Lw77FeKDlPFTHxn_RE9B164EgQZ1CCHADqA`,
