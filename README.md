@@ -1,21 +1,43 @@
 ## Quickstart
 
-Personal website running on GatsbyJs, ReactJs, and Nodejs improved from [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+<p align="center">
+  <a href="https://www.gatsbyjs.org">
+    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby Improved Starter Blog!
+</h1>
 
-To install
+Hi there! Thanks for checking out Gatsby Improved Starter Blog demo. Personal website running on GatsbyJs, ReactJs, and Nodejs improved from [Gatsby Starter Blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 
-```
-yarn install
-```
+## 🚀 To run this project in your computer
 
-then run local server:
+1.  **Clone this project.**
 
-```bash
-yarn
-yarn run dev
-```
+    ```
+    gatsby new gatsby-improved https://github.com/heriswn/gatsby-improved-starter-blog
+    ```
 
-Navigate to `localhost:8000`.
+2.  **Navigate to directory.**
+
+    ```
+    cd gatsby-improved
+    ```
+
+3.  **Install dependancies**
+
+    ```npm install```
+    or
+    ```yarn```
+
+4. **Start development!**
+
+    ```gatsby develop```
+
+    Your site is now running at `http://localhost:8000`!
+
+5.  **Open the source code and start editing!**
 
 ## Features
 
