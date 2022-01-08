@@ -1,6 +1,14 @@
 ---
 title: Hello World!
-date: "2015-05-01T23:46:37.121Z"
+date: 2017-01-23
+template: post
+thumbnail: '../../thumbnails/gatsby.png'
+slug: hallo-world
+categories:
+  - Personal
+tags:
+  - life
+  - new year
 ---
 
 Wow! I love blogging so much already.
