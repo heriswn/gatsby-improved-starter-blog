@@ -2,9 +2,8 @@ import React, { Component } from 'react'
 import { graphql } from "gatsby"
 import PostListing from "../components/postlisting"
 import config from "../utils/siteconfig"
-// import Layout from "../components/layout"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Helmet from 'react-helmet'
 
 export default class BlogPage extends Component {
   state = {
@@ -58,10 +57,10 @@ export default class BlogPage extends Component {
     const { filteredPosts, searchTerm, currentCategories } = this.state
     const filterCount = filteredPosts.length
     const categories = this.props.data.categories.group
+    const locations = `${__PATH_PREFIX__}/blog`
 
     return (
-      <div>
-        <Helmet title={`Articles – ${config.siteTitle}`} />
+      <Layout location={locations} title={`${config.siteTitle}`}>
         <Seo title="Blog" />
         <div className="container padding-non-home-page">
           <h1>Articles</h1>
@@ -96,7 +95,7 @@ export default class BlogPage extends Component {
           </div>
           <PostListing postEdges={filteredPosts} />
         </div>
-      </div>
+      </Layout>
     )
   }
 }
