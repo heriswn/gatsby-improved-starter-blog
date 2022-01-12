@@ -1,17 +1,17 @@
 ---
-title: Hello World!
-date: 2017-01-23
+title: My Third Post!
+date: 2022-01-09
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
 slug: hallo-world
 categories:
-  - Personal
+  - Tech
 tags:
-  - life
-  - new year
+  - Amazing
+  - Work Hard
 ---
 
-Wow! I love blogging so much already.
+This is third post.
 
 Did you know that "despite its name, salted duck eggs can also be made from
 chicken eggs, though the taste and texture will be somewhat different, and the

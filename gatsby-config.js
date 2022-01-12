@@ -1,4 +1,8 @@
+const urljoin = require('url-join')
+const config = require('./src/utils/siteconfig')
+
 module.exports = {
+  pathPrefix: config.pathPrefix === '' ? '/' : config.pathPrefix,
   siteMetadata: {
     title: `Gatsby Improved Starter Blog`,
     author: {
@@ -6,7 +10,7 @@ module.exports = {
       summary: `who lives and works in Indonesia building useful things.`,
     },
     description: `An improved starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbyimprovedstarterblog.gatsbyjs.io/`,
+    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     social: {
       twitter: `analystid`,
     },
@@ -23,6 +27,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: `content`,
       },
     },
     {

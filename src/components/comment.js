@@ -16,14 +16,14 @@ export default class Comments extends Component {
       scriptEl.setAttribute("data-category-id", "DIC_kwDOGXv20c4B_6eX");
       scriptEl.setAttribute("data-mapping", "pathname");
       scriptEl.setAttribute("data-lang", "en");
-      scriptEl.setAttribute( "data-theme", "dark");
+      scriptEl.setAttribute("data-theme", "dark");
       this.commentBox.current.appendChild(scriptEl);
   }
 
   render() {
     return (
         <div className="comment-box-wrapper container pt-7">
-          <h2 className="blog-post">Comments</h2>
+          <h2 className="blog-post">Comments {''}</h2>
           <hr className="my-0"/>
           <div ref={this.commentBox} className="comment-box"/>
           {/* Above element is where the comments are injected */}
