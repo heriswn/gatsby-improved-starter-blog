@@ -62,7 +62,7 @@ export default class BlogPage extends Component {
     return (
       <Layout location={locations} title={`${config.siteTitle}`}>
         <Seo title="Blog" />
-        <div className="container padding-non-home-page">
+        <div className="blog-post">
           <h1>Articles</h1>
           <div className="category-container">
             {categories.map(category => {
