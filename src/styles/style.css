@@ -61,6 +61,11 @@
   --color-text-light: #222;
   --color-background: #ffffff;
   --color-navbar: #fff;
+  --color-category-background: #6c25be05;
+  --color-category: #6c25be;
+  --color-category-active: #6c25be10;
+  --color-category-focus: #6c25be10;
+  --color-category-hover-background: #6c25be10;
 }
 
 :root.dark {
@@ -476,6 +481,8 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+/* blog page */
+
 .alert {
   display: none;
   align-self: center;
@@ -514,23 +521,41 @@ a:focus {
   align-items: center;
   font-size: 0.85rem;
   padding: 0.5rem 0.75rem;
-  background: lighten(yellow, 32%);
+  background: var(--color-category-background);
   border-radius: border-radius;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: yellow;
+  color: var(--color-category);
   cursor: pointer;
 }
 
 .category-filter:active {
-  background: blue;
-  color: white;
+  background: var(--color-category);
+}
+
+.category-filter-active {
+  background: var(--color-category);
+  color: var(--color-navbar);
 }
 
 .category-filter:focus {
-  color: white;
-  background: darken(--fontWeight-black, 10%);
+  color: var(--color-text);
+  background: var(--color-category);
+}
+
+.category-filter:hover {
+  background: var(--color-category-hover-background);
+}
+
+.search {
+  margin-bottom: 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .count {
@@ -539,11 +564,20 @@ a:focus {
   justify-content: center;
   font-size: 0.8rem;
   margin-left: 1rem;
-  color: yellowgreen;
+  color: var(--color-category);
   height: 23px;
   width: 23px;
   border-radius: 50%;
   padding: 5px 5px 5px 5px;
+  background: var(--color-navbar);
+}
+
+.filter-count {
+  width: 80px;
+  text-align: center;
+  color: var(--color-category);
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 /* Media queries */
