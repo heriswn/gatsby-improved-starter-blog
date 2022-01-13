@@ -11,7 +11,7 @@ export default class Footer extends Component {
             href="https://gatsbyjs.com/"
             target="_blank"
             rel="noopener noreferrer"
-            >Gatsby</Link>
+            >GatsbyJS</Link>
           </li>
         </ul>
         <ul>
