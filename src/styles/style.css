@@ -61,6 +61,11 @@
   --color-text-light: #222;
   --color-background: #ffffff;
   --color-navbar: #fff;
+  --category-color-active: #5183F5;
+  --category-background-hover: #d8e2fc;
+  --category-background: #ebf1fe;
+  --category-color-text: #7598f8;
+  --category-color-text-active: white;
 }
 
 :root.dark {
@@ -476,6 +481,8 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+/* New */
+
 .alert {
   display: none;
   align-self: center;
@@ -485,8 +492,8 @@ a:focus {
 .new {
   display: inline-block;
   font-size: 0.9rem;
-  background: lighten(yellow, 26%);
-  color: darken(yellow, 18%);
+  background: lighten(var(--color-background), 26%);
+  color: darken(var(--color-primary), 18%);
   border-radius: border-radius;
   padding: 0.5rem 1rem;
   text-align: center;
@@ -495,11 +502,21 @@ a:focus {
 .popular {
   display: inline-block;
   font-size: 0.9rem;
-  background: lighten(green, 50%);
-  color: green;
+  background: lighten(var(--color-text-light), 50%);
+  color: var(--color-navbar);
   border-radius: border-radius;
   padding: 0.5rem 1rem;
   text-align: center;
+}
+
+.search {
+  margin-bottom: 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .category-container {
@@ -514,23 +531,33 @@ a:focus {
   align-items: center;
   font-size: 0.85rem;
   padding: 0.5rem 0.75rem;
-  background: lighten(yellow, 32%);
+  background: var(--category-background);
   border-radius: border-radius;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: yellow;
+  color: var(--category-color-text);
   cursor: pointer;
 }
 
 .category-filter:active {
-  background: blue;
-  color: white;
+  background: var(--category-color-active);
+  color: var(--color-background);
+}
+
+.category-filter-active {
+  background: var(--primary-color);
+  color: var(--color-navbar);
+}
+
+.category-filter:hover {
+  background: lighten(yellowgreen, 28%);
+  color: darken(var(--color-primary), 5%);
 }
 
 .category-filter:focus {
-  color: white;
-  background: darken(--fontWeight-black, 10%);
+  color: var(--color-text);
+  background: darken(var(--primary-color), 10%);
 }
 
 .count {
@@ -539,11 +566,20 @@ a:focus {
   justify-content: center;
   font-size: 0.8rem;
   margin-left: 1rem;
-  color: yellowgreen;
+  color: var(--primary-color);
   height: 23px;
   width: 23px;
   border-radius: 50%;
   padding: 5px 5px 5px 5px;
+  background: var(--color-navbar);
+}
+
+.filter-count {
+  width: 80px;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 /* Media queries */
