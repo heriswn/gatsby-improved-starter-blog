@@ -492,8 +492,8 @@ a:focus {
 .new {
   display: inline-block;
   font-size: 0.9rem;
-  background: lighten(yellow, 26%);
-  color: darken(yellow, 18%);
+  background: yellow;
+  color: blue;
   border-radius: border-radius;
   padding: 0.5rem 1rem;
   text-align: center;
@@ -502,8 +502,8 @@ a:focus {
 .popular {
   display: inline-block;
   font-size: 0.9rem;
-  background: lighten(green, 50%);
-  color: green;
+  background: green;
+  color: red;
   border-radius: border-radius;
   padding: 0.5rem 1rem;
   text-align: center;
