@@ -1813,10 +1813,15 @@
     "@types/node" "*"
     "form-data" "^3.0.0"
 
-"@types/node@*", "@types/node@>=10.0.0":
-  version "17.0.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.8.tgz#50d680c8a8a78fe30abe6906453b21ad8ab0ad7b"
-  integrity sha512-YofkM6fGv4gDJq78g4j0mMuGMkZVxZDgtU0JRdx6FgiJDG+0fY0GKVolOV8WqVmEhLCXkQRjwDdKyPxJp/uucg==
+"@types/node@*", "@types/node@>=10.0.0", "@types/node@>=12":
+  "integrity" "sha512-eUXZzHLHoZqj1frtUetNkUetYoJ6X55UmrVnFD4DMhVeAmwLjniZhtBmsRiemQh4uq4G3vUra/Ws/hs9vEvL3Q=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-16.11.13.tgz"
+  "version" "16.11.13"
+
+"@types/node@^8.5.7":
+  "integrity" "sha512-tktOkFUA4kXx2hhhrB8bIFb5TbwzS4uOhKEmwiD+NoiL0qtP2OQ9mFldbgD4dV1djrlBYP6eBuQZiWjuHUpqFw=="
+  "resolved" "https://registry.npmjs.org/@types/node/-/node-8.10.66.tgz"
+  "version" "8.10.66"
 
 "@types/node@^8.5.7":
   version "8.10.66"
