@@ -5,7 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Footer from "../components/footer"
-import { formatPostDate, formatReadingTime } from "../utils/helpers"
+import { formatDate, formatReadingTime } from "../utils/helpers"
 
 const BlogIndex = ({ location, data }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -47,7 +47,7 @@ const BlogIndex = ({ location, data }) => {
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{formatPostDate(post.frontmatter.date)}
+                  <small>{formatDate(post.frontmatter.date)}
                     {` • ${formatReadingTime(post.timeToRead)}`}</small>
                 </header>
                 <section>
