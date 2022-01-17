@@ -482,32 +482,7 @@ a:focus {
 }
 
 /* blog page */
-
-.alert {
-  display: none;
-  align-self: center;
-  justify-self: flex-end;
-}
-
-.new {
-  display: inline-block;
-  font-size: 0.9rem;
-  background: yellow;
-  color: blue;
-  border-radius: border-radius;
-  padding: 0.5rem 1rem;
-  text-align: center;
-}
-
-.popular {
-  display: inline-block;
-  font-size: 0.9rem;
-  background: green;
-  color: red;
-  border-radius: border-radius;
-  padding: 0.5rem 1rem;
-  text-align: center;
-}
+/* category */
 
 .category-container {
   display: flex;
@@ -578,6 +553,86 @@ a:focus {
   color: var(--color-category);
   font-size: 1.4rem;
   font-weight: 600;
+}
+
+/* blog page */
+/* posts */
+
+.post-container {
+  display: flex;
+}
+
+section .posts a {
+  display: block;
+}
+
+section .posts .each {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 60px 1fr 0;
+  padding: 1rem 0;
+  margin: 0;
+  border: 2px solid transparent;
+  border-bottom: 2px solid var(--color-navbar);
+}
+
+section .posts .date {
+  margin: 0;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+section .posts .last-of-type .each {
+  border-bottom-color: transparent;
+}
+
+section .posts h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+}
+
+section .posts .gatsby-image-wrapper {
+  margin-top: 0;
+  height: 40px !important;
+  width: 40px !important;
+}
+
+section .posts .excerpt {
+  display: none;
+}
+
+section .posts .simple a .each {
+  grid-template-columns: 50px 2fr auto;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0;
+  border: 2px solid transparent;
+}
+
+section .posts .simple a .each:hover {
+  background: white;
+}
+
+section .posts .simple .gatsby-image-wrapper {
+  margin-top: 0;
+  height: 30px !important;
+  width: 30px !important;
+}
+
+section .posts .simple h2 {
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  color: var(--color-text-light);
+}
+
+section .posts .simple h2:hover {
+  color: #111;
 }
 
 /* Media queries */
