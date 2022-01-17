@@ -30,7 +30,7 @@ export default class PostListing extends Component {
     const postList = this.getPostList()
 
     return (
-      <section className={`posts ${simple ? 'simple' : ''}`}>
+      <section className={`posts ${simple ? 'posts-simple' : ''}`}>
         {postList.map(post => {
           let thumbnail
           if (post.thumbnail) {
@@ -43,7 +43,7 @@ export default class PostListing extends Component {
 
           return (
             <Link to={post.path} key={post.title}>
-              <div>
+              <div className="each">
                 {thumbnail ? <GatsbyImage image={thumbnail} /> : <div />}
                 <div>
                   <h2>{post.title}</h2>
