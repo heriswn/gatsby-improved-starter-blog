@@ -25,22 +25,10 @@ const config = {
       name: 'Project',
       link: '/project/'
     },
-    // {
-    //   name: "Work",
-    //   link: "/work/"
-    // },
     {
       name: 'About',
       link: '/about/',
     },
-    // {
-    //   name: 'Contact',
-    //   link: '/contact',
-    // },
-    // {
-    //   name: 'Contact',
-    //   link: '/contact/',
-    // },
   ],
   themeColor: '#3F80FF', // Used for setting manifest and progress theme colors.
   backgroundColor: '#ffffff',

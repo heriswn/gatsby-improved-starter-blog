@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { GatsbyImage } from "gatsby-plugin-image"
-
 import moment from 'moment'
-import { formatDate } from '../utils/global'
+import { GatsbyImage } from "gatsby-plugin-image"
+import { formatDate } from '../utils/helpers'
 
 export default class PostListing extends Component {
   getPostList() {
@@ -16,7 +15,7 @@ export default class PostListing extends Component {
           tags: postEdge.node.frontmatter.tags,
           thumbnail: postEdge.node.frontmatter.thumbnail,
           title: postEdge.node.frontmatter.title,
-          date: postEdge.node.fields.date,
+          date: postEdge.node.frontmatter.date,
           excerpt: postEdge.node.excerpt,
           timeToRead: postEdge.node.timeToRead,
           categories: postEdge.node.frontmatter.categories,

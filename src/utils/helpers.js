@@ -1,3 +1,6 @@
+import moment from 'moment'
+import config from '../utils/siteconfig'
+
 export function formatReadingTime(minutes) {
   let cups = Math.round(minutes / 5);
   // let bowls = 0;
@@ -10,16 +13,6 @@ export function formatReadingTime(minutes) {
   }
 }
 
-// `lang` is optional and will default to the current user agent locale
-export function formatPostDate(date, lang) {
-  if (typeof Date.prototype.toLocaleDateString !== 'function') {
-    return date;
-  }
+const formatDate = date => moment.utc(date).format(config.dateFormat)
 
-  date = new Date(date);
-  const args = [
-    lang,
-    { day: 'numeric', month: 'long', year: 'numeric' },
-  ].filter(Boolean);
-  return date.toLocaleDateString(...args);
-}
+export { formatDate }
