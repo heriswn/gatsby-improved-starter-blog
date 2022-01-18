@@ -231,8 +231,8 @@ body {
   color: var(--color-links-text);
   margin-right: 0;
   padding: 1rem 0.5rem;
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-weight: bold;
+  /* font-size: 1.1rem; */
   text-decoration: none;
 }
 
@@ -252,8 +252,8 @@ body {
 .links a {
   display: flex;
   align-items: center;
-  font-size: 1.05rem;
-  font-weight: 500;
+  /* font-size: 1.05rem; */
+  font-weight: bold;
   padding: 1rem 0.75rem;
   margin: 0;
   color: var(--color-links-text);
@@ -561,7 +561,7 @@ a:focus {
   border-radius: 4px;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: bold;
   background: var(--color-category-background);
   color: var(--color-category-text);
   cursor: pointer;
@@ -595,10 +595,10 @@ a:focus {
   color: var(--color-text);
   display: block;
   border-radius: 4px;
-  padding: 00.75rem;
+  padding: 0.75rem;
   outline: none;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: bold;
   width: 100%;
   max-width: 100%;
   line-height: 1;
@@ -619,8 +619,8 @@ a:focus {
   width: 80px;
   text-align: center;
   color: var(--color-category-text);
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 /* blog page */
@@ -653,8 +653,8 @@ a:focus {
 }
 
 .posts .title-blog {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: bold;
   line-height: 1.3;
   border-bottom: none;
   margin: 0;
@@ -663,7 +663,7 @@ a:focus {
 
 .posts .date {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: var(--color-posts-date);
   font-weight: 500;
 }
@@ -682,6 +682,7 @@ a:focus {
 .alert .new {
     display: inline-block;
     font-size: 0.9rem;
+    font-weight: bold;
     background: var(--color-alert-background);
     color: var(--color-alert-text);
     border-radius: 4px;
@@ -692,6 +693,7 @@ a:focus {
 .alert .popular {
     display: inline-block;
     font-size: 0.9rem;
+    font-weight: bold;
     background: var(--color-alert-background);
     color: var(--color-alert-text);
     border-radius: 4px;
