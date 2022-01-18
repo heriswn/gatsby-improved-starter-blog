@@ -25,11 +25,12 @@ export default class PostListing extends Component {
   }
 
   render() {
-    const { simple } = this.props
+    // const { simple } = this.props
     const postList = this.getPostList()
 
     return (
-      <section className={`posts ${simple ? 'posts-simple' : ''}`}>
+      // <section className={`posts ${simple ? 'posts-simple' : ''}`}>
+      <section className="posts">
         {postList.map(post => {
           let thumbnail
           if (post.thumbnail) {
@@ -46,14 +47,16 @@ export default class PostListing extends Component {
                 {thumbnail ? <GatsbyImage image={thumbnail} /> : <div />}
                 <div>
                   <h2>{post.title}</h2>
-                  {!simple ? <div className="excerpt">{date}</div> : null}
+                  {/* {!simple ? <div className="excerpt">{date}</div> : null} */}
+                  <div className='date'>{date}</div>
                 </div>
                 {newest && (
                   <div className="alert">
                     <div className="new">New!</div>
                   </div>
                 )}
-                {popular && !simple && !newest && (
+                {/* {popular && !simple && !newest && ( */}
+                {popular && !newest && (
                   <div className="alert">
                     <div className="popular">Popular</div>
                   </div>

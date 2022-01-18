@@ -70,6 +70,11 @@
   --color-search-background-hover: #f7f7f7;
   /* --color-category-background */
   --color-search-background-focus: #ebf0ff;
+  --color-alert-background: #fff5da;
+  --color-alert-text: #f8bb12;
+  --color-posts-each: #f3f2f3;
+  --color-posts-date: #717880;
+  --color-border-bottom: #f3f2f3;
 }
 
 :root.dark {
@@ -142,6 +147,11 @@
   --color-search-background-hover: #202121;
   /* --color-category-background */
   --color-search-background-focus: #1b1b1a;
+  --color-alert-background: #1b1b1a;
+  --color-alert-text: #1cb33b;
+  --color-posts-each: #303030;
+  --color-posts-date: #717880;
+  --color-border-bottom: #303030;
 }
 
 /* HTML elements */
@@ -583,34 +593,31 @@ a:focus {
 
 .posts a {
   display: block;
+  text-decoration: none;
 }
 
 .posts .each {
   display: grid;
   align-items: center;
   grid-template-columns: 60px 1fr 0;
-  padding: 1rem 0;
-  margin: 0;
+  padding: 1rem 2rem;
+  margin: 0 -2rem;
   border: 2px solid transparent;
-  border-bottom: 2px solid var(--color-navbar);
+  border-bottom: 2px solid var(--color-border-bottom);
 }
 
 .posts .each:hover {
-  background: yellow;
+  background: var(--color-posts-each);
   border-radius: 4px;
+  border-bottom-color: transparent;
 }
 
 .posts .date {
   margin: 0;
-  font-size: 0.9rem;
-  color: rgba(0, 0, 0, 0.4);
-  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--color-posts-date);
+  font-weight: 500;
 }
-
-.posts:last-of-type,
-  .each {
-    border-bottom-color: transparent;
-  }
 
 .posts h2 {
   font-size: 1.1rem;
@@ -627,35 +634,6 @@ a:focus {
   width: 40px !important;
 }
 
-/* .posts .excerpt {
-  display: none;
-} */
-
-/* .posts-simple .each a {
-  grid-template-columns: 50px 2fr auto;
-  align-items: center;
-  padding: 0.5rem 0;
-  margin: 0;
-  border: 2px solid transparent;
-}
-.posts-simple .each a:hover {
-  background: white;
-}
-.posts-simple .gatsby-image-wrapper {
-  margin-top: 0;
-  height: 30px !important;
-  width: 30px !important;
-}
-.posts-simple h2 {
-  font-weight: 500;
-  padding: 0;
-  margin: 0;
-  color: var(--color-text-light);
-}
-.posts-simple h2:hover {
-  color: #111;
-} */
-
 .alert {
   align-self: center;
   justify-self: flex-end;
@@ -664,8 +642,8 @@ a:focus {
 .alert .new {
     display: inline-block;
     font-size: 0.9rem;
-    background: blue;
-    color: black;
+    background: var(--color-alert-background);
+    color: var(--color-alert-text);
     border-radius: 4px;
     padding: 0.5rem 1rem;
     text-align: center;
@@ -674,8 +652,8 @@ a:focus {
 .alert .popular {
     display: inline-block;
     font-size: 0.9rem;
-    background: yellow;
-    color: red;
+    background: var(--color-alert-background);
+    color: var(--color-alert-text);
     border-radius: 4px;
     padding: 0.5rem 1rem;
     text-align: center;
