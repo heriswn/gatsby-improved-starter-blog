@@ -80,6 +80,9 @@
   --color-dark-background: var(--color-background);
   --color-links-text: #c4b8aa;
   --color-links-active: #4e2710;
+  --color-tags-background: #f3f2f3;
+  --color-tags-text: #404141;
+  --color-tags-hover: #e4e4e5;
 }
 
 :root.dark {
@@ -162,6 +165,9 @@
   --color-dark-background: var(--color-search-border);
   --color-links-text: #5b6271;
   --color-links-active: #aeb2be;
+  --color-tags-background: #1b1b1a;
+  --color-tags-text: #6f9ac0;
+  --color-tags-hover: #101110;
 }
 
 /* HTML elements */
@@ -272,11 +278,11 @@ body {
   border-bottom: 1.5px solid var(--color-category-text);
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .links a {
     font-size: 0.5rem;
   }
-}
+} */
 
 .cta {
   display: flex;
@@ -705,4 +711,30 @@ a:focus {
     border-radius: 4px;
     padding: 0.5rem 1rem;
     text-align: center;
+}
+
+/* tags */
+.tag-container span {
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  background: var(--color-tags-background);
+  border-radius: 4px;
+  color: var(--color-tags-text);
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+.tag-container .count {
+  color: var(--color-tags-text);
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+.tag-container span:hover {
+  background: var(--color-tags-hover);
+}
+
+.tag-container .articles-page-tags {
+  margin-bottom: 1rem;
 }

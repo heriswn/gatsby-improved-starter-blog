@@ -26,7 +26,6 @@ export default class PostListing extends Component {
   }
 
   render() {
-    // const { simple } = this.props
     const postList = this.getPostList()
 
     return (
