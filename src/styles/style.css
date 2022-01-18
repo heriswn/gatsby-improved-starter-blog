@@ -216,7 +216,7 @@ body {
 }
 
 .nav-container {
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   height: 55px;
   max-width: var(--maxWidth-wrapper);
   margin: auto;
@@ -252,7 +252,7 @@ body {
 .links a {
   display: flex;
   align-items: center;
-  /* font-size: 1.05rem; */
+  font-size: 1.05rem;
   font-weight: bold;
   padding: 1rem 0.75rem;
   margin: 0;
@@ -270,6 +270,12 @@ body {
 .nav-scroll .links a:hover {
   color: var(--color-links-active);
   border-bottom: 1.5px solid var(--color-category-text);
+}
+
+@media only screen and (max-width: 600px) {
+  .links a {
+    font-size: 0.5rem;
+  }
 }
 
 .cta {

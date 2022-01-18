@@ -30,7 +30,6 @@ export default class PostListing extends Component {
     const postList = this.getPostList()
 
     return (
-      // <section className={`posts ${simple ? 'posts-simple' : ''}`}>
       <section className="posts">
         {postList.map(post => {
           let thumbnail
@@ -48,7 +47,6 @@ export default class PostListing extends Component {
                 {thumbnail ? <GatsbyImage image={thumbnail} /> : <div />}
                 <div>
                   <div className='title-blog'>{post.title}</div>
-                  {/* {!simple ? <div className="excerpt">{date}</div> : null} */}
                   <div className='date'>{date}</div>
                 </div>
                 {newest && (
@@ -56,7 +54,6 @@ export default class PostListing extends Component {
                     <div className="new">New!</div>
                   </div>
                 )}
-                {/* {popular && !simple && !newest && ( */}
                 {popular && !newest && (
                   <div className="alert">
                     <div className="popular">Popular</div>
