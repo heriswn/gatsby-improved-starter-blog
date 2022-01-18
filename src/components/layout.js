@@ -1,5 +1,6 @@
 import * as React from "react"
 import Navbar from "./navbar"
+import config from "../utils/siteconfig"
 import { Link } from "gatsby"
 
 const Layout = ({ location, title, children }) => {
@@ -15,7 +16,7 @@ const Layout = ({ location, title, children }) => {
     )
   } else {
     header = (
-      <Navbar />
+      <Navbar menuLinks={config.menuLinks} />
     )
   }
 

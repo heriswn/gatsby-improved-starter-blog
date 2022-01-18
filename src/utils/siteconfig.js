@@ -23,7 +23,7 @@ const config = {
     },
     {
       name: 'Project',
-      link: '/project/'
+      link: '/project/',
     },
     {
       name: 'About',

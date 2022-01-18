@@ -25,19 +25,22 @@ export default class Navbar extends Component {
 
   render() {
     const { scrolled } = this.state;
+    const { menuLinks } = this.props;
 
     return (
       <nav className={scrolled ? 'nav-scroll' : 'nav'}>
         <div className="nav-container">
-          <div>
-            <Link className="header-link-home" to="/">
-              Home
+          <div className="brand">
+            <Link to="/">
+              <span className="text">Home</span>
             </Link>
           </div>
           <div className="links">
-            <Link to="/blog">Blog</Link>
-            <Link to="/project">Project</Link>
-            <Link to="/about">About</Link>
+            {menuLinks.map(link => (
+              <Link key={link.name} to={link.link} activeClassName="active">
+                {link.name}
+              </Link>
+            ))}
             <ToggleMode />
           </div>
         </div>
