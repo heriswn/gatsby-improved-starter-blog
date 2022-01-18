@@ -4,6 +4,7 @@ import PostListing from "../components/postlisting"
 import config from "../utils/siteconfig"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Footer from "../components/footer"
 
 export default class BlogPage extends Component {
   state = {
@@ -94,6 +95,7 @@ export default class BlogPage extends Component {
             <div className="filter-count">{filterCount}</div>
           </div>
           <PostListing postEdges={filteredPosts} />
+          <Footer />
         </div>
       </Layout>
     )
