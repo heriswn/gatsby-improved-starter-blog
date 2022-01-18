@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
+import * as React from "react"
 import { Link } from 'gatsby'
 import moment from 'moment'
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -46,7 +47,7 @@ export default class PostListing extends Component {
               <div className="each">
                 {thumbnail ? <GatsbyImage image={thumbnail} /> : <div />}
                 <div>
-                  <h2>{post.title}</h2>
+                  <div className='title-blog'>{post.title}</div>
                   {/* {!simple ? <div className="excerpt">{date}</div> : null} */}
                   <div className='date'>{date}</div>
                 </div>

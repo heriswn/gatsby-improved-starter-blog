@@ -21,12 +21,16 @@ const ToggleMode = () => {
   };
 
   return (
-    <div className="cta">
-        <button className="dark-switcher" onClick={ThemeToggle}>
+    <div className='cta'>
+        <button className='dark-switcher' onClick={ThemeToggle}>
             {theme === 'dark' ? (
-              <img className="theme-icon" src={sun} alt="Light Mode" />
+              <span>
+                <img className='theme-icon' src={sun} alt="Light Mode" />
+              </span>
             ) : (
-              <img className="theme-icon" src={moon} alt="Dark Mode" />
+              <span>
+                <img className='theme-icon' src={moon} alt="Dark Mode" />
+              </span>
             )}
         </button>
     </div>
