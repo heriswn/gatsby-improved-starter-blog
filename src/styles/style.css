@@ -478,7 +478,7 @@ a:focus {
 .global-wrapper {
   margin: var(--spacing-8) auto;
   max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  padding: var(--spacing-16) var(--spacing-5);
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -553,6 +553,35 @@ a:focus {
 
 .gatsby-highlight {
   margin-bottom: var(--spacing-8);
+}
+
+/* thumbnails */
+.single-header {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.single-header .gatsby-image-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  height: 150px !important;
+  width: 150px !important;
+}
+
+.single-header .flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-header h1 {
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.single-header .flex .post-meta {
+  background: yellow;
+  margin-bottom: 1rem;
 }
 
 /* blog page */
