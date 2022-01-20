@@ -13,7 +13,6 @@ export default function PageTemplate({ data }) {
   return (
     <Layout location={locations} title={`${config.siteTitle}`}>
       <Seo title="page.js"/>
-
       <article id={slug}>
         <header>
           <div className="container" style={{ paddingBottom: 0 }}>
@@ -21,7 +20,6 @@ export default function PageTemplate({ data }) {
             <p className="description">{description}</p>
           </div>
         </header>
-
         <section
           className="container"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -30,8 +28,6 @@ export default function PageTemplate({ data }) {
     </Layout>
   )
 }
-
-PageTemplate.Layout = Layout
 
 export const pageQuery = graphql`
   query PageBySlug($slug: String!) {

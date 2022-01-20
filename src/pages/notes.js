@@ -11,27 +11,25 @@ export default function NoteIndex({ data, location }) {
 
   return (
     <Layout location={location} title={`${config.siteTitle}`}>
-      <Seo title={`${config.siteTitle}`}/>
-      <article className="blog-page">
-        <header>
-          <div className="container">
-            <h1>Notes</h1>
-            <p className="description">
-              Notes, musings, and whatever else I want to write.
-            </p>
-          </div>
-        </header>
-        <section>
-          <div className="container">
-            <PostListing postEdges={notePostEdges}/>
-          </div>
-        </section>
-      </article>
+    <Seo title={`${config.siteTitle}`}/>
+    <article className="blog-page">
+      <header>
+        <div className="container">
+          <h1>Notes</h1>
+          <p className="description">
+            Notes, musings, and whatever else I want to write.
+          </p>
+        </div>
+      </header>
+      <section>
+        <div className="container">
+          <PostListing postEdges={notePostEdges}/>
+        </div>
+      </section>
+    </article>
     </Layout>
   )
 }
-
-NoteIndex.Layout = Layout
 
 export const pageQuery = graphql`
   query NotesQuery {

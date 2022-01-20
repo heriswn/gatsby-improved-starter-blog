@@ -31,8 +31,6 @@ export default function CategoryTemplate({ location, data, pageContext }) {
   )
 }
 
-CategoryTemplate.Layout = Layout
-
 export const pageQuery = graphql`
   query CategoryPage($category: String) {
     category: allMarkdownRemark(
