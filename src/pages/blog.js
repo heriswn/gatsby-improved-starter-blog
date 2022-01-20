@@ -95,8 +95,8 @@ export default class BlogPage extends Component {
             <div className="filter-count">{filterCount}</div>
           </div>
           <PostListing postEdges={filteredPosts} />
-          <Footer />
         </div>
+        <Footer />
       </Layout>
     )
   }
