@@ -81,4 +81,6 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 This project is open source and available under the [MIT License](LICENSE).
 
+## Sponsor this project
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S881N2I)
