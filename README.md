@@ -83,12 +83,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## Support this project
 
-<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
-<script>
-  kofiWidgetOverlay.draw('heriswn', {
-    'type': 'floating-chat',
-    'floating-chat.donateButton.text': 'Support me',
-    'floating-chat.donateButton.background-color': '#5083f4',
-    'floating-chat.donateButton.text-color': '#fff'
-  });
-</script>
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S881N2I)
