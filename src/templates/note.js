@@ -5,12 +5,12 @@ import Layout from '../components/Layout'
 import Seo from '../components/seo'
 import config from '../utils/siteconfig'
 
-export default function NoteTemplate({ data }) {
+export default function NoteTemplate({ data, location }) {
   const post = data.markdownRemark
   const { title, slug, date } = post.frontmatter
 
   return (
-    <div>
+    <Layout location={location} title={`${config.siteTitle}`}>
       <Seo title={`${config.siteTitle}`}/>
       <article id={slug}>
         <header>
@@ -27,17 +27,14 @@ export default function NoteTemplate({ data }) {
             </p>
           </div>
         </header>
-
         <section
           className="container"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>
-    </div>
+    </Layout>
   )
 }
-
-NoteTemplate.Layout = Layout
 
 export const pageQuery = graphql`
   query NoteBySlug($slug: String!) {

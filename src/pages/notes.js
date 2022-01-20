@@ -1,20 +1,17 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import config from '../utils/siteconfig'
-import { Posts } from '../components/posts'
-import { getSimplifiedPosts } from '../utils/helpers'
+import PostListing from "../components/postlisting"
 
-export default function NoteIndex({ data }) {
-  const posts = data.allMarkdownRemark.edges
-  const simplifiedPosts = useMemo(() => getSimplifiedPosts(posts), [posts])
+export default function NoteIndex({ data, location }) {
+  const notePostEdges = data.note.edges
 
   return (
-    <>
+    <Layout location={location} title={`${config.siteTitle}`}>
       <Seo title={`${config.siteTitle}`}/>
-
       <article className="blog-page">
         <header>
           <div className="container">
@@ -24,14 +21,13 @@ export default function NoteIndex({ data }) {
             </p>
           </div>
         </header>
-
         <section>
           <div className="container">
-            <Posts data={simplifiedPosts} showYears prefix="notes" />
+            <PostListing postEdges={notePostEdges}/>
           </div>
         </section>
       </article>
-    </>
+    </Layout>
   )
 }
 
@@ -39,19 +35,26 @@ NoteIndex.Layout = Layout
 
 export const pageQuery = graphql`
   query NotesQuery {
-    allMarkdownRemark(
+    note: allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { template: { eq: "note" } } }
     ) {
       edges {
         node {
-          id
           fields {
             slug
           }
+          excerpt
+          timeToRead
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
             title
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
+            date
+            template
           }
         }
       }

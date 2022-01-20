@@ -1,39 +1,33 @@
-import React, { useMemo } from 'react'
+import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Seo from '../components/seo'
 import config from '../utils/siteconfig'
-import { Posts } from '../components/Posts'
-import { getSimplifiedPosts } from '../utils/helpers'
+import PostListing from "../components/postlisting"
 
-export default function CategoryTemplate({ data, pageContext }) {
+export default function CategoryTemplate({ location, data, pageContext }) {
   let { category } = pageContext
-  const { totalCount } = data.allMarkdownRemark
-  const posts = data.allMarkdownRemark.edges
-  const simplifiedPosts = useMemo(() => getSimplifiedPosts(posts), [posts])
-  const message = totalCount === 1 ? ' post found.' : ' posts found.'
+  const { totalCount } = data.category
+  const categoryPostEdges = data.category.edges
 
   return (
-    <div>
+    <Layout location={location} title={`${config.siteTitle}`}>
       <Seo title={`${config.siteTitle}`}/>
-
       <article>
         <header>
           <div className="container">
-            <h1>{category}</h1>
+            <h1>Category: {category}</h1>
             <p className="description">
-              <span className="count">{totalCount}</span>
-              {message}
+              <span className="count">Post found: {totalCount}</span>
             </p>
           </div>
         </header>
-
         <section className="container">
-          <Posts data={simplifiedPosts} />
+          <PostListing postEdges={categoryPostEdges} />
         </section>
       </article>
-    </div>
+    </Layout>
   )
 }
 
@@ -41,23 +35,29 @@ CategoryTemplate.Layout = Layout
 
 export const pageQuery = graphql`
   query CategoryPage($category: String) {
-    allMarkdownRemark(
+    category: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { categories: { in: [$category] } } }
     ) {
       totalCount
       edges {
         node {
-          id
           fields {
             slug
           }
+          excerpt
+          timeToRead
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
-            description
             tags
             categories
+            thumbnail {
+              childImageSharp {
+                gatsbyImageData(layout: FIXED)
+              }
+            }
+            date
+            template
           }
         }
       }

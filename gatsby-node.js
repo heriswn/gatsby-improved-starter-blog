@@ -94,7 +94,7 @@ const createPages = async ({ graphql, actions }) => {
 
   notes.forEach((note) => {
     createPage({
-      path: `/notes/${slugify(note.node.fields.slug)}`,
+      path: `/${slugify(note.node.fields.slug)}`,
       component: notePage,
       context: {
         slug: note.node.fields.slug,
