@@ -80,3 +80,15 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## Support this project
+
+<script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+<script>
+  kofiWidgetOverlay.draw('heriswn', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#5083f4',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
