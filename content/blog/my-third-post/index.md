@@ -3,7 +3,7 @@ title: My Third Post!
 date: 2022-01-09
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
-slug: hallo-world
+slug: my-third-post
 categories:
   - Tech
 tags:

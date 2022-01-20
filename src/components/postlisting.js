@@ -9,13 +9,13 @@ export default class PostListing extends Component {
   getPostList() {
     const { postEdges } = this.props
     const postList = postEdges
-      .filter(postEdge => postEdge.node.frontmatter.template === 'post')
       .map(postEdge => {
         return {
           path: postEdge.node.fields.slug,
           tags: postEdge.node.frontmatter.tags,
           thumbnail: postEdge.node.frontmatter.thumbnail,
           title: postEdge.node.frontmatter.title,
+          template: postEdge.node.frontmatter.template,
           date: postEdge.node.frontmatter.date,
           excerpt: postEdge.node.excerpt,
           timeToRead: postEdge.node.timeToRead,
@@ -26,17 +26,23 @@ export default class PostListing extends Component {
   }
 
   render() {
+    const { simple } = this.props
     const postList = this.getPostList()
 
     return (
-      <section className="posts">
+      <section className={`posts ${simple ? 'posts-simple' : ''}`}>
         {postList.map(post => {
           let thumbnail
           if (post.thumbnail) {
             thumbnail = post.thumbnail.childImageSharp.gatsbyImageData
           }
 
-          const popular = post.categories.includes('Popular')
+          let postPopular
+          if (post.categories) {
+            postPopular = post.categories.includes('Popular')
+          }
+
+          const popular = postPopular
           const date = formatDate(post.date)
           const newest = moment(post.date) > moment().subtract(1, 'months')
 
@@ -45,8 +51,8 @@ export default class PostListing extends Component {
               <div className="each">
                 {thumbnail ? <GatsbyImage image={thumbnail} /> : <div />}
                 <div>
-                  <div className='title-blog'>{post.title}</div>
-                  <div className='date'>{date}</div>
+                  <h2>{post.title}</h2>
+                  {!simple ? <div className="excerpt">{date}</div> : null}
                 </div>
                 {newest && (
                   <div className="alert">

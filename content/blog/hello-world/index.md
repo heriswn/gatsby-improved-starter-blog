@@ -3,7 +3,7 @@ title: Hello World!
 date: 2017-01-23
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
-slug: hallo-world
+slug: hello-world
 categories:
   - Personal
 tags:
