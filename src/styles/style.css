@@ -218,7 +218,7 @@ body {
 }
 
 .nav-scroll .active {
-  border-bottom: 1.5px solid var(--color-category-text);
+  border-bottom: 2px solid var(--color-category-text);
 }
 
 .nav-container {
@@ -676,7 +676,7 @@ a:focus {
   text-decoration: none;
 }
 
-.posts .each {
+.posts a .each {
   display: grid;
   align-items: center;
   grid-template-columns: 60px 1fr 0;
@@ -686,16 +686,34 @@ a:focus {
   border-bottom: 2px solid var(--color-border-bottom);
 }
 
-.posts .each:hover {
+.posts a .each:hover {
   background: var(--color-posts-each);
-  color: var(--color-blog-list-hover);
   border-radius: 4px;
-  border-bottom-color: transparent;
+  border-bottom: transparent;
 }
 
-.posts .title-blog {
-  font-size: 1rem;
-  font-weight: bold;
+.posts a .each:hover:last-of-type :hover {
+  border-bottom: var(--color-category-text);
+}
+
+.posts a .each h2 {
+  color: var(--color-links-active);
+}
+
+.posts .each:hover h2 {
+  color: var(--color-blog-list-hover);
+}
+
+.posts .each:active,
+.posts .each:focus {
+  border: 2px dashed var(--color-category-text);
+  background: var(--color-posts-each);
+}
+
+
+.posts h2 {
+  font-size: 1.1rem;
+  font-weight: 650;
   line-height: 1.3;
   border-bottom: none;
   margin: 0;
@@ -704,7 +722,14 @@ a:focus {
 
 .posts .date {
   margin: 0;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-posts-date);
+}
+
+.posts .excerpt {
+  font-size: 1rem;
+  display: block;
   color: var(--color-posts-date);
   font-weight: 500;
 }
@@ -714,6 +739,46 @@ a:focus {
   height: 40px !important;
   width: 40px !important;
 }
+
+/* Simple */
+
+.posts-simple .excerpt {
+  display: none;
+}
+
+.posts-simple:hover {
+  color: #111;
+}
+
+.posts-simple .each {
+  grid-template-columns: 50px 2fr auto;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0;
+  border: 2px solid transparent;
+}
+
+.posts-simple .each:hover {
+  background: white;
+}
+
+.posts-simple .gatsby-image-wrapper {
+  margin-top: 0;
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.posts-simple h2 {
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  color: var(--color-blog-list-hover);
+}
+
+.posts-simple h2:hover {
+  color: var(--color-blog-list-hover);
+}
+
 
 .alert {
   align-self: center;
