@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import sun from '../images/sun.svg'
-import moon from '../images/moon.svg'
+import sun from '../assets/sun.svg'
+import moon from '../assets/moon.svg'
 
 const ToggleMode = () => {
   let websiteTheme;
