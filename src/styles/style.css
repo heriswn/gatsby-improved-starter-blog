@@ -583,7 +583,13 @@ a:focus {
   margin-bottom: 1rem;
 }
 
-/* blog page */
+/* dekstop only */
+@media screen and (min-width: 800px) {
+  .posts .gatsby-image-wrapper .desktop-only {
+    display: none;
+  }
+}
+
 /* category */
 
 .category-container {
