@@ -28,7 +28,7 @@ export default function PostTemplate({ data, location }) {
         <header
           className="single-header"
         >
-          <GatsbyImage image={thumbnail} alt={siteTitle} />
+          <GatsbyImage image={thumbnail} alt="thumbnails image" />
           <div className='flex'>
             <h1 itemProp="headline">{title}</h1>
             <p>{formatDate(date)}

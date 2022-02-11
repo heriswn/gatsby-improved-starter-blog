@@ -13,9 +13,7 @@ export function formatReadingTime(minutes) {
   }
 }
 
-const formatDate = date => moment.utc(date).format(config.dateFormat)
-
-export { formatDate }
+export const formatDate = date => moment.utc(date).format(config.dateFormat)
 
 export function getSimplifiedPosts(posts, options = {}) {
   return posts.map((post) => ({
