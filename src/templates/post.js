@@ -28,7 +28,7 @@ export default function PostTemplate({ data, location }) {
         <header
           className="single-header"
         >
-          <GatsbyImage image={thumbnail} alt="thumbnails image" />
+          <GatsbyImage image={thumbnail} alt={siteTitle} />
           <div className='flex'>
             <h1 itemProp="headline">{title}</h1>
             <p>{formatDate(date)}
@@ -62,7 +62,7 @@ export const pageQuery = graphql`
       timeToRead
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
         tags
         description
         thumbnail {
