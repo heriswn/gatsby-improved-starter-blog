@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Seo from '../components/seo'
-import Layout from '../components/layout'
+import Seo from '../components/SEO'
+import Layout from '../components/Layout'
 import config from '../utils/siteconfig'
-import PostListing from "../components/postlisting"
+import PostListing from "../components/Postlisting"
 
 export default function NoteIndex({ data, location }) {
   const notePostEdges = data.note.edges

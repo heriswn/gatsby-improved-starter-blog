@@ -12,7 +12,7 @@ module.exports = {
     description: `An improved starter blog demonstrating what Gatsby can do.`,
     siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     social: {
-      twitter: `analystid`,
+      twitter: `swnheri`,
     },
     // add search console for submit to google
     console: {

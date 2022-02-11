@@ -1,6 +1,6 @@
 ---
-title: Hello World!
-date: 2017-01-23
+title: "Hello World!"
+date: "2017-01-23"
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
 slug: hello-world

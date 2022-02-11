@@ -1,14 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Bio from "../components/bio"
-import Seo from '../components/seo'
-import Layout from '../components/layout'
-import Comments from "../components/comment"
-import Footer from "../components/footer"
+import Bio from "../components/Bio"
+import Seo from '../components/SEO'
+import Layout from '../components/Layout'
+import Comments from "../components/Comment"
+import Footer from "../components/Footer"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { formatDate, formatReadingTime } from '../utils/helpers'
-import PostTags from '../components/posttags'
+import PostTags from '../components/Posttags'
 
 export default function PostTemplate({ data, location }) {
   const post = data.markdownRemark
@@ -28,7 +28,7 @@ export default function PostTemplate({ data, location }) {
         <header
           className="single-header"
         >
-          <GatsbyImage image={thumbnail} />
+          <GatsbyImage image={thumbnail} alt={siteTitle} />
           <div className='flex'>
             <h1 itemProp="headline">{title}</h1>
             <p>{formatDate(date)}

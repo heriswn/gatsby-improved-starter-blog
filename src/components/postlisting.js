@@ -19,7 +19,7 @@ export default class PostListing extends Component {
           date: postEdge.node.frontmatter.date,
           excerpt: postEdge.node.excerpt,
           timeToRead: postEdge.node.timeToRead,
-          categories: postEdge.node.frontmatter.categories,
+          category: postEdge.node.frontmatter.categories,
         }
       })
     return postList
@@ -37,12 +37,12 @@ export default class PostListing extends Component {
             thumbnail = post.thumbnail.childImageSharp.gatsbyImageData
           }
 
-          let postPopular
-          if (post.categories) {
-            postPopular = post.categories.includes('Popular')
+          let popularPost
+          if (post.category) {
+            popularPost = post.category.includes('Popular')
           }
 
-          const popular = postPopular
+          const popular = popularPost
           const date = formatDate(post.date)
           const newest = moment(post.date) > moment().subtract(1, 'months')
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Link, graphql } from 'gatsby'
 import kebabCase from 'lodash.kebabcase'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../components/Layout'
+import Seo from '../components/SEO'
 import config from '../utils/siteconfig'
 
 export default class TagsPage extends Component {

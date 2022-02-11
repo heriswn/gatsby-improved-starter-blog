@@ -1,5 +1,5 @@
 import * as React from "react"
-import Navbar from "./navbar"
+import Navbar from "./Navbar"
 import config from "../utils/siteconfig"
 import { Link } from "gatsby"
 

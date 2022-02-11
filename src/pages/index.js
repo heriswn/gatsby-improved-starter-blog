@@ -1,11 +1,11 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 
-import PostListing from "../components/postlisting"
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Footer from "../components/footer"
+import PostListing from "../components/Postlisting"
+import Bio from "../components/Bio"
+import Layout from "../components/Layout"
+import Seo from "../components/SEO"
+import Footer from "../components/Footer"
 
 const BlogIndex = ({ location, data }) => {
   const posts = data.allMarkdownRemark.nodes

@@ -1,6 +1,6 @@
 ---
-title: My Third Post!
-date: 2022-01-09
+title: "My Third Post!"
+date: "2022-01-09"
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
 slug: my-third-post

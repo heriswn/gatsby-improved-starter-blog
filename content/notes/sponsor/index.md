@@ -1,6 +1,6 @@
 ---
-title: Sponsor Me
-date: 2017-01-23
+title: "Sponsor Me"
+date: "2017-01-23"
 template: note
 thumbnail: '../../thumbnails/gatsby.png'
 slug: sponsor-me

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { graphql } from "gatsby"
-import PostListing from "../components/postlisting"
+import PostListing from "../components/Postlisting"
 import config from "../utils/siteconfig"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Footer from "../components/footer"
+import Layout from "../components/Layout"
+import Seo from "../components/SEO"
+import Footer from "../components/Footer"
 
 export default class BlogPage extends Component {
   state = {
@@ -68,7 +68,6 @@ export default class BlogPage extends Component {
           <div className="category-container">
             {categories.map(category => {
               const active = currentCategories.includes(category.fieldValue)
-
               return (
                 <div
                   className={`category-filter ${active ? 'category-filter-active' : ''}`}
