@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import ToggleMode from './Togglemode';
+import ToggleMode from './togglemode';
 
 export default class Navbar extends Component {
   state = {

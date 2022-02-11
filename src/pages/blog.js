@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { graphql } from "gatsby"
-import PostListing from "../components/Postlisting"
+import PostListing from "../components/postlisting"
 import config from "../utils/siteconfig"
-import Layout from "../components/Layout"
-import Seo from "../components/SEO"
-import Footer from "../components/Footer"
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import Footer from "../components/footer"
 
 export default class BlogPage extends Component {
   state = {
