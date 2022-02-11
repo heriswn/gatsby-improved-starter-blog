@@ -1,8 +1,8 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Seo from '../components/SEO'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 import config from '../utils/siteconfig'
 
 export default function NoteTemplate({ data, location }) {

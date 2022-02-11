@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import Seo from '../components/SEO'
-import Layout from '../components/Layout'
+import Seo from '../components/seo'
+import Layout from '../components/layout'
 import config from '../utils/siteconfig'
-import PostListing from '../components/Postlisting'
+import PostListing from '../components/postlisting'
 
 export default class TagTemplate extends Component {
   render() {

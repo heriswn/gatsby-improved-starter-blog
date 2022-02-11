@@ -1,10 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Seo from '../components/SEO'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 import config from '../utils/siteconfig'
-import PostListing from "../components/Postlisting"
+import PostListing from "../components/postlisting"
 
 export default function CategoryTemplate({ location, data, pageContext }) {
   let { category } = pageContext
