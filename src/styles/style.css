@@ -277,12 +277,6 @@ body {
   border-bottom: 2px solid var(--color-category-text);
 }
 
-/* @media only screen and (max-width: 600px) {
-  .links a {
-    font-size: 0.5rem;
-  }
-} */
-
 .cta {
   display: flex;
   align-items: center;
@@ -585,7 +579,7 @@ a:focus {
 
 /* dekstop only */
 @media screen and (min-width: 800px) {
-  .posts .gatsby-image-wrapper .desktop-only {
+  .posts .gatsby-image-wrapper {
     display: none;
   }
 }
