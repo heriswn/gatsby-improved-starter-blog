@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import * as React from "react"
+import React from "react"
 import { Link } from 'gatsby'
 import moment from 'moment'
 import { GatsbyImage } from "gatsby-plugin-image"
