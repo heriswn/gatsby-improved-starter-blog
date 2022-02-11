@@ -1,6 +1,7 @@
 ---
 title: "My Second Post!"
 date: "2015-05-06"
+description: This is a my-second-post description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
 slug: my-second-post

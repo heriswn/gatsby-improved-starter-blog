@@ -1,6 +1,7 @@
 ---
 title: "My Third Post!"
 date: "2022-01-09"
+description: This is a my-third-post description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
 slug: my-third-post

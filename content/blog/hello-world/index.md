@@ -1,6 +1,7 @@
 ---
 title: "Hello World!"
 date: "2017-01-23"
+description: This is a hello world description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 template: post
 thumbnail: '../../thumbnails/gatsby.png'
 slug: hello-world
