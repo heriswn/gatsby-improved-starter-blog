@@ -14,40 +14,14 @@ module.exports = {
     social: {
       twitter: `swnheri`,
     },
-    // add search console for submit to google
-    console: {
-      name: `google-site-verification`,
-      search: `rP2__VP8Lw77FeKDlPFTHxn_RE9B164EgQZ1CCHADqA`,
-    },
   },
   plugins: [
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content`,
         name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/notes`,
-        name: `notes`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/page`,
-        name: `page`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/thumbnails`,
-        name: `thumbnails`,
       },
     },
     {
