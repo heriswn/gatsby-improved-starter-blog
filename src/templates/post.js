@@ -5,7 +5,6 @@ import Bio from "../components/bio"
 import Seo from '../components/seo'
 import Layout from '../components/layout'
 import Comments from "../components/comment"
-import Footer from "../components/footer"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { formatDate, formatReadingTime } from '../utils/helpers'
 import PostTags from '../components/posttags'
@@ -19,21 +18,21 @@ export default function PostTemplate({ data, location }) {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title={siteTitle}/>
+      <Seo title={siteTitle} />
       <article
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
       >
-        <header
-          className="single-header"
-        >
+        <header className="single-header">
           <GatsbyImage image={thumbnail} alt={siteTitle} />
-          <div className='flex'>
+          <div className="flex">
             <h1 itemProp="headline">{title}</h1>
-            <p>{formatDate(date)}
-            {` • ${formatReadingTime(post.timeToRead)}`}</p>
-            <PostTags tags={posttag}/>
+            <p>
+              {formatDate(date)}
+              {` • ${formatReadingTime(post.timeToRead)}`}
+            </p>
+            <PostTags tags={posttag} />
           </div>
         </header>
         <section
@@ -42,9 +41,8 @@ export default function PostTemplate({ data, location }) {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>
-      <Bio />
       <Comments />
-      <Footer />
+      <Bio />
     </Layout>
   )
 }

@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "./navbar"
 import config from "../utils/siteconfig"
 import { Link } from "gatsby"
+import Footer from "./footer"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -11,9 +12,11 @@ const Layout = ({ location, title, children }) => {
   if (isRootPath) {
     header = (
       <header className="global-header">
-        <h1 className="main-heading">
-          <Link to="/">{title}</Link>
-        </h1>
+        <div className="page-width">
+          <h1 className="main-heading">
+            <Link to="/">{title}</Link>
+          </h1>
+        </div>
       </header>
     )
   } else {
@@ -23,9 +26,12 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="global-wrapper" data-is-root-path={isRootPath}>
+    <div data-is-root-path={isRootPath}>
       {header}
-      <main>{children}</main>
+      <div className="global-wrapper">
+        <main>{children}</main>
+      </div>
+      <Footer/>
     </div>
   )
 }

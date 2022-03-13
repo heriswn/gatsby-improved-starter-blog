@@ -4,7 +4,6 @@ import PostListing from "../components/postlisting"
 import config from "../utils/siteconfig"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Footer from "../components/footer"
 
 export default class BlogPage extends Component {
   state = {
@@ -95,7 +94,6 @@ export default class BlogPage extends Component {
           </div>
           <PostListing postEdges={filteredPosts} />
         </div>
-        <Footer />
       </Layout>
     )
   }
