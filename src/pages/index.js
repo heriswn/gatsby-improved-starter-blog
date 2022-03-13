@@ -5,7 +5,6 @@ import PostListing from "../components/postlisting"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Footer from "../components/footer"
 
 const BlogIndex = ({ location, data }) => {
   const posts = data.allMarkdownRemark.nodes
@@ -23,7 +22,6 @@ const BlogIndex = ({ location, data }) => {
           directory you specified for the "gatsby-source-filesystem" plugin in
           gatsby-config.js).
         </p>
-        <Footer />
       </Layout>
     )
   }
@@ -52,7 +50,6 @@ const BlogIndex = ({ location, data }) => {
           {/* <NewsletterForm /> */}
         </section>
       </div>
-      <Footer />
     </Layout>
   )
 }

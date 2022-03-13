@@ -17,11 +17,14 @@ const madeWithLinks = [
 export default class Footer extends Component {
   render() {
     return (
-      <footer>
+      <footer className="footer">
         <section>
           <nav>
+            <span>GATSBY IMPROVED STARTER BLOG</span>
+          </nav>
+          <nav>
             <span>Improved by Heri Setiawan</span>
-            {links.map((link) => (
+            {links.map(link => (
               <a
                 href={link.url}
                 target="_blank"
@@ -31,14 +34,14 @@ export default class Footer extends Component {
                 {link.label}
               </a>
             ))}
-            {internalLinks.map((link) => (
+            {internalLinks.map(link => (
               <Link to={link.url} key={link.url}>
                 {link.label}
               </Link>
             ))}
           </nav>
           <nav>
-            {madeWithLinks.map((link) => (
+            {madeWithLinks.map(link => (
               <a
                 href={link.url}
                 title={link.label}
@@ -47,12 +50,12 @@ export default class Footer extends Component {
                 key={link.url}
               >
                 <span>{link.label}</span>
-                <img src={link.icon} alt={link.label} width={20} height={20}/>
+                <img src={link.icon} alt={link.label} width={20} height={20} />
               </a>
             ))}
           </nav>
         </section>
       </footer>
-    );
+    )
   }
 }

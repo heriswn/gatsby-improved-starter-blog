@@ -21,7 +21,7 @@ const ToggleMode = () => {
   };
 
   return (
-    <div className='cta'>
+    <nav className='cta'>
         <button className='dark-switcher' onClick={ThemeToggle}>
             {theme === 'dark' ? (
               <span>
@@ -33,7 +33,7 @@ const ToggleMode = () => {
               </span>
             )}
         </button>
-    </div>
+    </nav>
   );
 };
 
